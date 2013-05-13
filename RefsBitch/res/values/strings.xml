@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RefsBitch</string>
+    <string name="action_settings">Settings</string>
+    <string name="color_picker_spinner">U-6</string>
+	<string name="selectteamcolor">Next Select The Team Colors</string>
+	<string name="team_1_choose_color">Choose Team 1 Color</string>
+	<string name="team_2_choose_color">Choose Team 2 Color</string>
+    
+</resources>

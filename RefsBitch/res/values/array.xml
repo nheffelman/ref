@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name = "ages">
+        <item>U-6</item>
+        <item>U-8</item>
+        <item>U-10</item>
+        <item>U-12</item>
+        <item>U-14</item>
+        <item>U-16</item>
+        <item>U-18</item>
+        <item>OTHER</item>
+    </array>
+</resources> 
