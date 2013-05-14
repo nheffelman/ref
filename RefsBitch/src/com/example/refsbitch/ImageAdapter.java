@@ -15,10 +15,13 @@ public class ImageAdapter extends BaseAdapter {
     // Keep all Images in array
     public Integer[] mThumbIds = {
     		R.drawable.orange, R.drawable.yellow,
-    		R.drawable.blue,
+    		R.drawable.blue, R.drawable.pink,
     		R.drawable.indigo, R.drawable.violet,
     		R.drawable.black, R.drawable.white,
-    		R.drawable.red, R.drawable.green
+    		R.drawable.red, R.drawable.green,
+    		R.drawable.gray, R.drawable.blackandwhite,
+    		R.drawable.blackandgold, R.drawable.blackandred,
+    		R.drawable.blue2
             
     };
  
