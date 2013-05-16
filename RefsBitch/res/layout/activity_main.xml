@@ -16,5 +16,26 @@
         android:layout_height="wrap_content"
         android:padding="20dip"
         android:text="@string/selectteamcolor" />
+    
+    <TableRow 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		
+	>
+	    <ImageButton
+	        android:id="@+id/t1c_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/blackandred" 
+	        android:layout_weight="50"/>
+
+	    <ImageButton
+	        android:id="@+id/t2c_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/blue"
+	        android:layout_weight="50" />
+    </TableRow>
+        />
 
 </LinearLayout>

@@ -11,6 +11,22 @@ import android.widget.ImageView;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
+    
+ // create a new ImageView for each item referenced by the Adapter
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ImageView imageView;
+        if (convertView == null) {  // if it's not recycled, initialize some attributes
+            imageView = new ImageView(mContext);
+            imageView.setLayoutParams(new GridView.LayoutParams(85, 85));
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageView.setPadding(8, 8, 8, 8);
+        } else {
+            imageView = (ImageView) convertView;
+        }
+
+        imageView.setImageResource(mThumbIds[position]);
+        return imageView;
+    }
  
     // Keep all Images in array
     public Integer[] mThumbIds = {
@@ -45,13 +61,13 @@ public class ImageAdapter extends BaseAdapter {
         return 0;
     }
  
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView = new ImageView(mContext);
-        imageView.setImageResource(mThumbIds[position]);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setLayoutParams(new GridView.LayoutParams(70, 70));
-        return imageView;
-    }
+    //@Override
+   // public View getView(int position, View convertView, ViewGroup parent) {
+    //    ImageView imageView = new ImageView(mContext);
+      //  imageView.setImageResource(mThumbIds[position]);
+        //imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        //imageView.setLayoutParams(new GridView.LayoutParams(70, 70));
+        //return imageView;
+   // }
  
 }

@@ -10,16 +10,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.RefsBitch.R;
 
 public class MainActivity extends Activity implements OnClickListener  {
-
-	int team1color;
+	int color = 0;
 	private Spinner spinner1;
 	public String ageresult = null;
 	int initialColor = 0xff0000ff;
-	
+		
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,8 @@ public class MainActivity extends Activity implements OnClickListener  {
         
         View button = findViewById(R.id.selectteamcolor_button);
         button.setOnClickListener(this);
+        
+        
         
         findViews();
         setAdapters();
@@ -66,9 +68,23 @@ public class MainActivity extends Activity implements OnClickListener  {
 	@Override
 	public void onClick(View v) {
 		Intent i = new Intent(this, ColorChooser.class);
-		startActivity(i);
+		startActivityForResult(i, color);
+		
 	}
 
 
-	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == RESULT_OK) {
+			Bundle basket = data.getExtras();
+			color = basket.getInt("keywhatevs");
+			Toast.makeText(MainActivity.this, "" + color, Toast.LENGTH_SHORT).show();
+			
+			
+		}
+	}
+
+		
 }
