@@ -11,12 +11,15 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
-import android.widget.Toast;
+
 
 import com.example.RefsBitch.R;
 
 public class MainActivity extends Activity implements OnClickListener  {
+	public int id = 0;
 	int color = 0;
+	int team1 = 0;
+	int team2 = 0;
 	private Spinner spinner1;
 	public String ageresult = null;
 	int initialColor = 0xff0000ff;
@@ -29,7 +32,7 @@ public class MainActivity extends Activity implements OnClickListener  {
     		R.drawable.blackandgold, R.drawable.blackandred,
     		R.drawable.blue2};
 	
-	
+		
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,8 @@ public class MainActivity extends Activity implements OnClickListener  {
         
         ImageButton t2cbutton = (ImageButton) findViewById(R.id.t2c_button);
         t2cbutton.setOnClickListener(this);
+        
+        
         
         
         findViews();
@@ -78,9 +83,32 @@ public class MainActivity extends Activity implements OnClickListener  {
 	
 	@Override
 	public void onClick(View v) {
-		Intent i = new Intent(this, ColorChooser.class);
-		startActivityForResult(i, color);
-		
+		switch (v.getId()) {
+		case R.id.t1c_button:
+			id = R.id.t1c_button;
+			Intent i = new Intent(this, ColorChooser.class);
+			startActivityForResult(i, color);
+		break;
+		case R.id.t2c_button:
+			id = R.id.t2c_button;
+			Intent g = new Intent(this, ColorChooser.class);
+			startActivityForResult(g, color);
+		break;
+		//case R.id.proceed_to_kickoff_button:
+			//String bread = editText1.getText().toString();
+			//String butter = editText2.getText().toString();
+			//Bundle basket = new Bundle();
+			//basket.putString("team1", bread);
+			//basket.putString("team2", butter);
+			//basket.putInt("color1", team1);
+			//basket.putInt("color2", team2);
+			//basket.putString("age", ageresult);
+			//Intent k = new Intent(MainActivity.this, KickOff.class);
+			//k.putExtras(basket);
+			//startActivity(k);
+		//break;	
+			
+	}
 	}
 
 
@@ -91,13 +119,20 @@ public class MainActivity extends Activity implements OnClickListener  {
 		if (resultCode == RESULT_OK) {
 			Bundle basket = data.getExtras();
 			color = basket.getInt("keywhatevs");
-			Toast.makeText(MainActivity.this, "" + color, Toast.LENGTH_SHORT).show();
-			ImageButton t1cbutton = (ImageButton) findViewById(R.id.t1c_button);
-			t1cbutton.setImageResource(colors[color]);
-			
-			
-			
-			
+			switch (id) {
+			case R.id.t1c_button:
+				ImageButton t1cbutton = (ImageButton) findViewById(R.id.t1c_button);
+				team1 = id;
+				t1cbutton.setImageResource(colors[color]);
+			break;
+			case R.id.t2c_button:
+				ImageButton t2cbutton = (ImageButton) findViewById(R.id.t2c_button);
+				team2 = id;
+				t2cbutton.setImageResource(colors[color]);
+			break;
+			}
+				
+				
 		}
 	}
 
