@@ -26,6 +26,8 @@
             android:name="com.example.refsbitch.ColorChooser" />
         <activity
             android:name="com.example.refsbitch.ImageAdapter" />
+        <activity
+            android:name="com.example.refsbitch.KickOff" />
     </application>
 
 </manifest>

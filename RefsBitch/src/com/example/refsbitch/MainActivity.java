@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -39,6 +40,9 @@ public class MainActivity extends Activity implements OnClickListener  {
         super.onCreate(savedInstanceState);
         
         setContentView(R.layout.activity_main);
+        
+        Button kickoffbutton = (Button) findViewById(R.id.goto_kickoff_button);
+        kickoffbutton.setOnClickListener(this);
         
         ImageButton t1cbutton = (ImageButton) findViewById(R.id.t1c_button);
         t1cbutton.setOnClickListener(this);
@@ -99,7 +103,7 @@ public class MainActivity extends Activity implements OnClickListener  {
 			Intent g = new Intent(this, ColorChooser.class);
 			startActivityForResult(g, color);
 		break;
-		//case R.id.proceed_to_kickoff_button:
+		case R.id.goto_kickoff_button:
 			//String bread = editText1.getText().toString();
 			//String butter = editText2.getText().toString();
 			//Bundle basket = new Bundle();
@@ -108,10 +112,10 @@ public class MainActivity extends Activity implements OnClickListener  {
 			//basket.putInt("color1", team1);
 			//basket.putInt("color2", team2);
 			//basket.putString("age", ageresult);
-			//Intent k = new Intent(MainActivity.this, KickOff.class);
+			Intent k = new Intent(MainActivity.this, KickOff.class);
 			//k.putExtras(basket);
-			//startActivity(k);
-		//break;	
+			startActivity(k);
+		break;	
 			
 	}
 	}
