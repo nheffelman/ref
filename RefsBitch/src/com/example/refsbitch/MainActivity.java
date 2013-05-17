@@ -19,9 +19,11 @@ import com.example.RefsBitch.R;
 
 public class MainActivity extends Activity implements OnClickListener  {
 	public int id = 0;
+	String t1name = null;
+	String t2name = null;
 	int color = 0;
-	int team1 = 0;
-	int team2 = 0;
+	int team1color = 0;
+	int team2color = 0;
 	private Spinner spinner1;
 	public String ageresult = null;
 	int initialColor = 0xff0000ff;
@@ -52,9 +54,10 @@ public class MainActivity extends Activity implements OnClickListener  {
         
         EditText team1name = (EditText)this.findViewById(R.id.t1name);
         team1name.setHint("Team 1");
+        t1name = team1name.getText().toString();
         EditText team2name = (EditText)this.findViewById(R.id.t2name);
         team2name.setHint("Team 2");
-        
+        t2name = team2name.getText().toString();
         
         findViews();
         setAdapters();
@@ -104,16 +107,14 @@ public class MainActivity extends Activity implements OnClickListener  {
 			startActivityForResult(g, color);
 		break;
 		case R.id.goto_kickoff_button:
-			//String bread = editText1.getText().toString();
-			//String butter = editText2.getText().toString();
-			//Bundle basket = new Bundle();
-			//basket.putString("team1", bread);
-			//basket.putString("team2", butter);
-			//basket.putInt("color1", team1);
-			//basket.putInt("color2", team2);
-			//basket.putString("age", ageresult);
+			Bundle basket = new Bundle();
+			basket.putString("team1name", t1name);
+			basket.putString("team2name", t2name);
+			basket.putInt("team1color", team1color);
+			basket.putInt("team2color", team2color);
+			basket.putString("age", ageresult);
 			Intent k = new Intent(MainActivity.this, KickOff.class);
-			//k.putExtras(basket);
+			k.putExtras(basket);
 			startActivity(k);
 		break;	
 			
@@ -131,12 +132,12 @@ public class MainActivity extends Activity implements OnClickListener  {
 			switch (id) {
 			case R.id.t1c_button:
 				ImageButton t1cbutton = (ImageButton) findViewById(R.id.t1c_button);
-				team1 = id;
+				team1color = id;
 				t1cbutton.setImageResource(colors[color]);
 			break;
 			case R.id.t2c_button:
 				ImageButton t2cbutton = (ImageButton) findViewById(R.id.t2c_button);
-				team2 = id;
+				team2color = id;
 				t2cbutton.setImageResource(colors[color]);
 			break;
 			}
