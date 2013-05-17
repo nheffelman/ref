@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
@@ -36,6 +37,7 @@ public class MainActivity extends Activity implements OnClickListener  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
         setContentView(R.layout.activity_main);
         
         ImageButton t1cbutton = (ImageButton) findViewById(R.id.t1c_button);
@@ -44,7 +46,10 @@ public class MainActivity extends Activity implements OnClickListener  {
         ImageButton t2cbutton = (ImageButton) findViewById(R.id.t2c_button);
         t2cbutton.setOnClickListener(this);
         
-        
+        EditText team1name = (EditText)this.findViewById(R.id.t1name);
+        team1name.setHint("Team 1");
+        EditText team2name = (EditText)this.findViewById(R.id.t2name);
+        team2name.setHint("Team 2");
         
         
         findViews();

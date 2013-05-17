@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
+    android:layout_height="fill_parent"
     android:orientation="vertical" >
 
     <Spinner
@@ -9,7 +9,39 @@
         android:layout_width="fill_parent"
         android:text="@string/color_picker_spinner"  
     />
+	<TableRow 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dip"
+		
+	>
 
+	    <EditText
+	        android:id="@+id/t1name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="5"
+	        android:ems="6"
+	       />
+	    
+	    <TextView 
+	        android:id="@+id/vs"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="90"
+	        android:gravity="center"
+	        android:text="@string/vs"             
+	        />
+
+	    <EditText 
+	        android:id="@+id/t2name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="5"
+	        android:ems="6"
+	        />
+
+    </TableRow>
     
     <TableRow 
 		android:layout_width="fill_parent"

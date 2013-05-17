@@ -40,12 +40,15 @@ public final class R {
         public static final int yellow=0x7f02000f;
     }
     public static final class id {
-        public static final int action_settings=0x7f090005;
-        public static final int grid_view=0x7f090004;
-        public static final int pictureGrid=0x7f090003;
+        public static final int action_settings=0x7f090008;
+        public static final int grid_view=0x7f090007;
+        public static final int pictureGrid=0x7f090006;
         public static final int spinner1=0x7f090000;
-        public static final int t1c_button=0x7f090001;
-        public static final int t2c_button=0x7f090002;
+        public static final int t1c_button=0x7f090004;
+        public static final int t1name=0x7f090001;
+        public static final int t2c_button=0x7f090005;
+        public static final int t2name=0x7f090003;
+        public static final int vs=0x7f090002;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -62,6 +65,7 @@ public final class R {
         public static final int selectteamcolor=0x7f060003;
         public static final int team_1_choose_color=0x7f060004;
         public static final int team_2_choose_color=0x7f060005;
+        public static final int vs=0x7f060006;
     }
     public static final class style {
         /** 
