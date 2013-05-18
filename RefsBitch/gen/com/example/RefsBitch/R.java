@@ -40,9 +40,10 @@ public final class R {
         public static final int yellow=0x7f02000f;
     }
     public static final class id {
-        public static final int action_settings=0x7f090009;
+        public static final int action_settings=0x7f09000a;
+        public static final int game_title=0x7f090008;
         public static final int goto_kickoff_button=0x7f090006;
-        public static final int grid_view=0x7f090008;
+        public static final int grid_view=0x7f090009;
         public static final int pictureGrid=0x7f090007;
         public static final int spinner1=0x7f090000;
         public static final int t1c_button=0x7f090004;

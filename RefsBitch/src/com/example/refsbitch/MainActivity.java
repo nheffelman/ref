@@ -106,7 +106,15 @@ public class MainActivity extends Activity implements OnClickListener  {
 			Intent g = new Intent(this, ColorChooser.class);
 			startActivityForResult(g, color);
 		break;
+		//sends all the info to the kickoff page
 		case R.id.goto_kickoff_button:
+			EditText team1name = (EditText)this.findViewById(R.id.t1name);
+			t1name = team1name.getText().toString();
+			EditText team2name = (EditText)this.findViewById(R.id.t2name);
+	        team2name.setHint("Team 2");
+	        t2name = team2name.getText().toString();
+	        spinner1 = (Spinner) findViewById(R.id.spinner1);
+	        ageresult = spinner1.getSelectedItem().toString();
 			Bundle basket = new Bundle();
 			basket.putString("team1name", t1name);
 			basket.putString("team2name", t2name);
@@ -130,11 +138,13 @@ public class MainActivity extends Activity implements OnClickListener  {
 			Bundle basket = data.getExtras();
 			color = basket.getInt("keywhatevs");
 			switch (id) {
+			//returns the color from choose color and sets it to team 1
 			case R.id.t1c_button:
 				ImageButton t1cbutton = (ImageButton) findViewById(R.id.t1c_button);
 				team1color = id;
 				t1cbutton.setImageResource(colors[color]);
 			break;
+			//returns the color from choose color and sets it to team 2
 			case R.id.t2c_button:
 				ImageButton t2cbutton = (ImageButton) findViewById(R.id.t2c_button);
 				team2color = id;
