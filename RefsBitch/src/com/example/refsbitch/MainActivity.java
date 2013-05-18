@@ -2,6 +2,8 @@ package com.example.refsbitch;
 
 
 
+import com.example.RefsBitch.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +17,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 
 
-import com.example.RefsBitch.R;
+
 
 public class MainActivity extends Activity implements OnClickListener  {
 	public int id = 0;

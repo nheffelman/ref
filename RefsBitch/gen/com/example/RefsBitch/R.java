@@ -35,9 +35,10 @@ public final class R {
         public static final int orange=0x7f02000a;
         public static final int pink=0x7f02000b;
         public static final int red=0x7f02000c;
-        public static final int violet=0x7f02000d;
-        public static final int white=0x7f02000e;
-        public static final int yellow=0x7f02000f;
+        public static final int soccer_field=0x7f02000d;
+        public static final int violet=0x7f02000e;
+        public static final int white=0x7f02000f;
+        public static final int yellow=0x7f020010;
     }
     public static final class id {
         public static final int action_settings=0x7f09000a;
