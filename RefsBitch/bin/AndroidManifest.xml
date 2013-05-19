@@ -28,6 +28,8 @@
             android:name="com.example.refsbitch.ImageAdapter" />
         <activity
             android:name="com.example.refsbitch.KickOff" />
+        <activity
+            android:name="com.example.refsbitch.CustomDrawableView" />
     </application>
 
 </manifest>
