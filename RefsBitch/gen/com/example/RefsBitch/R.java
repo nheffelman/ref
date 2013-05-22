@@ -28,24 +28,27 @@ public final class R {
         public static final int blackandwhite=0x7f020003;
         public static final int blue=0x7f020004;
         public static final int blue2=0x7f020005;
-        public static final int gray=0x7f020006;
-        public static final int green=0x7f020007;
-        public static final int green1=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int indigo=0x7f02000a;
-        public static final int orange=0x7f02000b;
-        public static final int pink=0x7f02000c;
-        public static final int red=0x7f02000d;
-        public static final int soccer_field=0x7f02000e;
-        public static final int violet=0x7f02000f;
-        public static final int white=0x7f020010;
-        public static final int yellow=0x7f020011;
+        public static final int darkgreen=0x7f020006;
+        public static final int gray=0x7f020007;
+        public static final int green=0x7f020008;
+        public static final int green1=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int indigo=0x7f02000b;
+        public static final int orange=0x7f02000c;
+        public static final int pink=0x7f02000d;
+        public static final int red=0x7f02000e;
+        public static final int soccer_field=0x7f02000f;
+        public static final int violet=0x7f020010;
+        public static final int white=0x7f020011;
+        public static final int yellow=0x7f020012;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000a;
+        public static final int action_settings=0x7f09000d;
+        public static final int defense=0x7f090009;
         public static final int game_title=0x7f090008;
         public static final int goto_kickoff_button=0x7f090006;
-        public static final int grid_view=0x7f090009;
+        public static final int grid_view=0x7f09000c;
+        public static final int offense=0x7f09000b;
         public static final int pictureGrid=0x7f090007;
         public static final int spinner1=0x7f090000;
         public static final int t1c_button=0x7f090004;
@@ -53,6 +56,7 @@ public final class R {
         public static final int t2c_button=0x7f090005;
         public static final int t2name=0x7f090003;
         public static final int vs=0x7f090002;
+        public static final int whokicksoffbutton=0x7f09000a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -72,6 +76,7 @@ public final class R {
         public static final int team_1_choose_color=0x7f060004;
         public static final int team_2_choose_color=0x7f060005;
         public static final int vs=0x7f060006;
+        public static final int wkob_label=0x7f060008;
     }
     public static final class style {
         /** 

@@ -24,8 +24,8 @@ public class MainActivity extends Activity implements OnClickListener  {
 	String t1name = null;
 	String t2name = null;
 	int color = 0;
-	int team1color = 0;
-	int team2color = 0;
+	public int team1color = 0;
+	public int team2color = 0;
 	private Spinner spinner1;
 	public String ageresult = null;
 	int initialColor = 0xff0000ff;
@@ -143,13 +143,13 @@ public class MainActivity extends Activity implements OnClickListener  {
 			//returns the color from choose color and sets it to team 1
 			case R.id.t1c_button:
 				ImageButton t1cbutton = (ImageButton) findViewById(R.id.t1c_button);
-				team1color = id;
+				team1color = color;
 				t1cbutton.setImageResource(colors[color]);
 			break;
 			//returns the color from choose color and sets it to team 2
 			case R.id.t2c_button:
 				ImageButton t2cbutton = (ImageButton) findViewById(R.id.t2c_button);
-				team2color = id;
+				team2color = color;
 				t2cbutton.setImageResource(colors[color]);
 			break;
 			}
